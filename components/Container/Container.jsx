@@ -1,12 +1,3 @@
-// import styled from "styled-components";
-
-// export const Container = styled.div`
-//     width: 70%;
-//     height : 100%;
-//     background-color : #000;
-//     color : #fff
-// `
-
 import React from "react";
 
 const Container = ({ children }) => {
