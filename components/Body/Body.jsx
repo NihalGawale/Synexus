@@ -18,7 +18,7 @@ const Body = () => {
         </h1>
         <p className="px-3 mt-4 font-semibold text-center text-sm lg:text-2xl text-[#7d7b7b]">
           A unified and interconnected space where collaboration and synergy
-          thrive.
+          thrive
         </p>
         <p className="px-3 mt-4 text-center text-xs lg:text-lg font-medium text-[#7d7b7b] lg:px-36">
           "Experience unprecedented growth and efficiency with our app, as we
@@ -28,7 +28,7 @@ const Body = () => {
           <span className="text-[#1e1d1d] font-semibold">
             skilled individuals{" "}
           </span>
-          together."
+          together"
         </p>
 
         <div className="w-[300px] lg:w-[550px] h-[300px] lg:h-[550px] relative">
@@ -56,17 +56,17 @@ const Body = () => {
           <Card
             imagePath="/assets/working-professional.jpg"
             title="As a Professional"
-            description="Don't limit yourself to traditional way of earning money. Collaborate with freelancers to offer your skills. Monetize your skills and boost your income. "
+            description="Don't limit yourself to traditional way of earning money. Collaborate with freelancers to offer your skills. Monetize your skills and boost your income"
           />
           <Card
-            imagePath="/assets/student2.jpg"
+            imagePath="/assets/student.jpg"
             title="As a Learner or Job Seeker"
-            description="Collaborate with freelancers and gain an experience of working on live projects. Land your dream job smoothly."
+            description="Collaborate with freelancers and gain an experience of working on live projects. Land your dream job smoothly"
           />
           <Card
             imagePath="/assets/freelance-enthusiast2.jpg"
             title="As a Freelancing Enthusiast"
-            description="Collaborate with freelancers and gain experience in freelancing world. With this experience give a kickstart to your freelancing journey."
+            description="Collaborate with freelancers and gain experience in freelancing world. With this experience give a kickstart to your freelancing journey"
           />
         </div>
       </Wrapper>
@@ -74,7 +74,7 @@ const Body = () => {
       <Wrapper>
         <h1 className="leading-[30px] px-2 text-[#1e1d1d] md:leading-[65px] text-center  text-[25px] lg:text-[70px] font-extrabold lg:max-w-7xl">
           Join a community where freelancers and skilled individuals elevate
-          projects together.
+          projects together
         </h1>
         <div className="w-[300px] lg:w-[550px] h-[300px] lg:h-[550px] relative">
           <lottie-player

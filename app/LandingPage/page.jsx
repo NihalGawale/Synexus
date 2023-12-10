@@ -8,7 +8,7 @@ import React from "react";
 
 const LandingPage = () => {
   return (
-    <div className="h-[100%] w-[100%] flex flex-col justify-center items-center pt-5 lg:pt-10">
+    <div className="screen w-[100%] flex flex-col justify-center items-center pt-5 lg:pt-10">
       <Container>
         <Header />
         <Body />
