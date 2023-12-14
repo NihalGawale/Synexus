@@ -9,7 +9,7 @@ const Header = () => {
       <div className="flex justify-between items-center w-[90%]">
         <p className="">Synexus</p>
         <div className="text-sm lg:text-base text-[#7d7b7b] flex font-medium space-x-4 lg:space-x-10">
-          <Link className="hover:text-black " href="/Blog"> Blogs</Link> 
+          <Link className="hover:text-black " href="/Blogs"> Blogs</Link> 
           <div className="w-5 h-5 lg:w-7 lg:h-7 relative">
             <Image src="/assets/discord.png" alt="discord-image" fill objectFit="cover"/>
           </div>

@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import Wrapper from "../Wrapper/Wrapper";
 import Box from "../Box/Box";
 import Card from "../LandingPageCard/Card";
+import Image from "next/image";
+import Tile from "../FAQ/Tile";
 
 const Body = () => {
   const ref = useRef(null);
@@ -44,14 +46,14 @@ const Body = () => {
       </Wrapper>
 
       <Wrapper>
-        <div className="leading-[30px] border-b-2 px-2 pb-3 lg:pb-5 text-[#1e1d1d] md:leading-[65px] text-center text-[34px] lg:text-[70px] font-extrabold">
+        <div className="leading-[30px] border-b-2 px-2 pb-3 lg:pb-5  text-[#1e1d1d] md:leading-[65px] text-center text-[34px] lg:text-[70px] font-extrabold">
           Key Features
         </div>
-        <div className="flex flex-col pt-10 lg:pt-16 lg:flex-row space-y-10 lg:space-y-0 lg:space-x-10">
+        <div className="flex flex-col pt-10 lg:pt-20 lg:flex-row space-y-10 lg:space-y-0 lg:space-x-10">
           <Card
             imagePath="/assets/freelancer.jpg"
             title="As a Freelancer"
-            description="Discover a diverse pool of skills to enhance your projects. Collaborate with skilled individuals and delegate your tasks for faster delivery of your project"
+            description="Discover a diverse pool of skills to enhance your projects. Create your own team and delegate your tasks for faster delivery of your project"
           />
           <Card
             imagePath="/assets/working-professional.jpg"
@@ -60,14 +62,63 @@ const Body = () => {
           />
           <Card
             imagePath="/assets/student.jpg"
-            title="As a Learner or Job Seeker"
-            description="Collaborate with freelancers and gain an experience of working on live projects. Land your dream job smoothly"
+            title="As a Student or Job Seeker"
+            description="Skip the traditional way of applying to jobs by showing internship. Collaborate and work on live projects to gain rich experience and Land your dream job smoothly"
           />
           <Card
             imagePath="/assets/freelance-enthusiast2.jpg"
             title="As a Freelancing Enthusiast"
-            description="Collaborate with freelancers and gain experience in freelancing world. With this experience give a kickstart to your freelancing journey"
+            description="Collaborate with freelancers and gain experience in the freelancing world. With this experience give a kickstart to your freelancing journey"
           />
+        </div>
+      </Wrapper>
+
+      <Wrapper>
+        <div className="leading-[30px] border-b-2 px-2 pb-3 lg:pb-5 text-[#1e1d1d] md:leading-[65px] text-center text-[34px] lg:text-[70px] font-extrabold">
+          How it works
+        </div>
+        <div className="flex space-y-12 lg:space-y-0 lg:space-x-10 lg:flex-row flex-col pt-10 lg:pt-20">
+          <div className=" flex flex-col space-y-6">
+            <div className="w-[300px] lg:w-[500px] h-[300px] lg:h-[350px] relative shadow-lg shadow-gray-900/50">
+              <Image
+                src="/assets/collaboration2.jpg"
+                alt="collaboration"
+                fill={true}
+                objectFit="cover"
+              />
+            </div>
+            <p className="flex justify-center text-xl font-bold text-[#616060]">
+              Collaborate
+            </p>
+          </div>
+
+          <div className=" flex flex-col space-y-6">
+            <div className="w-[300px] lg:w-[500px] h-[300px] lg:h-[350px] relative shadow-lg shadow-gray-900/50">
+              <Image
+                src="/assets/working-together.jpg"
+                alt="collaboration"
+                fill={true}
+                objectFit="cover"
+              />
+            </div>
+            <p className="flex justify-center text-xl font-bold text-[#616060]">
+              Synergize
+            </p>
+          </div>
+
+          <div className=" flex flex-col space-y-6">
+            <div className="w-[300px] lg:w-[500px] h-[300px] lg:h-[350px] relative shadow-lg shadow-gray-900/50">
+              <Image
+                src="/assets/celebrate-success.jpg"
+                alt="collaboration"
+                fill={true}
+                objectFit="cover"
+              />
+            </div>
+            <p className="flex justify-center text-xl font-bold text-[#616060]">
+              Win-Win
+            </p>
+          </div>
         </div>
       </Wrapper>
 
@@ -85,6 +136,21 @@ const Body = () => {
             mode="normal"
             src="/assets/Animation - 1701887695588.json"
           />
+        </div>
+      </Wrapper>
+
+      <Wrapper>
+        <h1 className="leading-[30px] border-b-2 pb-3 lg:pb-5 text-[#1e1d1d] md:leading-[65px] text-center  text-[25px] lg:text-[70px] font-extrabold lg:max-w-7xl">
+          Frequently Asked Questions
+        </h1>
+        <div className="flex max-w-5xl justify-center items-center flex-wrap gap-10 pt-10 lg:pt-20
+        ">
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
         </div>
       </Wrapper>
     </Box>
