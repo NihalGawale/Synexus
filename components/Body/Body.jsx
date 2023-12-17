@@ -4,6 +4,9 @@ import Box from "../Box/Box";
 import Card from "../LandingPageCard/Card";
 import Image from "next/image";
 import Tile from "../FAQ/Tile";
+import faqs from "@/app/constants/FAQs";
+import features from "@/app/constants/KeyFeatures";
+import works from "@/app/constants/HowItWorks";
 
 const Body = () => {
   const ref = useRef(null);
@@ -50,26 +53,13 @@ const Body = () => {
           Key Features
         </div>
         <div className="flex flex-col pt-10 lg:pt-20 lg:flex-row space-y-10 lg:space-y-0 lg:space-x-10">
-          <Card
-            imagePath="/assets/freelancer.jpg"
-            title="As a Freelancer"
-            description="Discover a diverse pool of skills to enhance your projects. Create your own team and delegate your tasks for faster delivery of your project"
-          />
-          <Card
-            imagePath="/assets/working-professional.jpg"
-            title="As a Professional"
-            description="Don't limit yourself to traditional way of earning money. Collaborate with freelancers to offer your skills. Monetize your skills and boost your income"
-          />
-          <Card
-            imagePath="/assets/student.jpg"
-            title="As a Student or Job Seeker"
-            description="Skip the traditional way of applying to jobs by showing internship. Collaborate and work on live projects to gain rich experience and Land your dream job smoothly"
-          />
-          <Card
-            imagePath="/assets/freelance-enthusiast2.jpg"
-            title="As a Freelancing Enthusiast"
-            description="Collaborate with freelancers and gain experience in the freelancing world. With this experience give a kickstart to your freelancing journey"
-          />
+          {features.map((feature) => (
+            <Card
+              imagePath={feature.imagePath}
+              title={feature.title}
+              description={feature.description}
+            />
+          ))}
         </div>
       </Wrapper>
 
@@ -78,47 +68,21 @@ const Body = () => {
           How it works
         </div>
         <div className="flex space-y-12 lg:space-y-0 lg:space-x-10 lg:flex-row flex-col pt-10 lg:pt-20">
-          <div className=" flex flex-col space-y-6">
-            <div className="w-[300px] lg:w-[500px] h-[300px] lg:h-[350px] relative shadow-lg shadow-gray-900/50">
-              <Image
-                src="/assets/collaboration2.jpg"
-                alt="collaboration"
-                fill={true}
-                objectFit="cover"
-              />
+          {works.map((item) => (
+            <div className=" flex flex-col space-y-6">
+              <div className="w-[300px] lg:w-[500px] h-[300px] lg:h-[350px] relative shadow-md shadow-gray-900/50">
+                <Image
+                  src={item.imagePath}
+                  alt={item.title}
+                  fill={true}
+                  objectFit="cover"
+                />
+              </div>
+              <p className="flex justify-center text-xl font-bold text-[#616060]">
+                {item.title}
+              </p>
             </div>
-            <p className="flex justify-center text-xl font-bold text-[#616060]">
-              Collaborate
-            </p>
-          </div>
-
-          <div className=" flex flex-col space-y-6">
-            <div className="w-[300px] lg:w-[500px] h-[300px] lg:h-[350px] relative shadow-lg shadow-gray-900/50">
-              <Image
-                src="/assets/working-together.jpg"
-                alt="collaboration"
-                fill={true}
-                objectFit="cover"
-              />
-            </div>
-            <p className="flex justify-center text-xl font-bold text-[#616060]">
-              Synergize
-            </p>
-          </div>
-
-          <div className=" flex flex-col space-y-6">
-            <div className="w-[300px] lg:w-[500px] h-[300px] lg:h-[350px] relative shadow-lg shadow-gray-900/50">
-              <Image
-                src="/assets/celebrate-success.jpg"
-                alt="collaboration"
-                fill={true}
-                objectFit="cover"
-              />
-            </div>
-            <p className="flex justify-center text-xl font-bold text-[#616060]">
-              Win-Win
-            </p>
-          </div>
+          ))}
         </div>
       </Wrapper>
 
@@ -143,14 +107,13 @@ const Body = () => {
         <h1 className="leading-[30px] border-b-2 pb-3 lg:pb-5 text-[#1e1d1d] md:leading-[65px] text-center  text-[25px] lg:text-[70px] font-extrabold lg:max-w-7xl">
           Frequently Asked Questions
         </h1>
-        <div className="flex max-w-5xl justify-center items-center flex-wrap gap-10 pt-10 lg:pt-20
-        ">
-          <Tile />
-          <Tile />
-          <Tile />
-          <Tile />
-          <Tile />
-          <Tile />
+        <div
+          className="flex max-w-5xl justify-center items-center flex-wrap gap-10 pt-10 lg:pt-20
+        "
+        >
+          {faqs.map((faq) => (
+            <Tile question={faq.question} answer={faq.answer} />
+          ))}
         </div>
       </Wrapper>
     </Box>

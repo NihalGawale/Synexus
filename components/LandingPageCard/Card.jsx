@@ -3,7 +3,7 @@ import React from "react";
 
 const Card = ({imagePath, title, description}) => {
   return (
-    <div class="max-w-xs w-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-xs w-[300px] bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
       <div className="w-full h-[300px] relative">
         <Image
           fill
